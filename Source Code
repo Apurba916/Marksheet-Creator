@@ -9,6 +9,7 @@ int main()
     scanf("%d", &no_of_subjects);
     
     int total_marks = 0;
+    int full_marks = 0;
     char name_of_subject[100];
     int percentage;
     for (int i = 1; i <= no_of_subjects; i++)
@@ -18,7 +19,10 @@ int main()
         int marks;
         printf("Enter the marks of yours no %d subject %s:\n", i, name_of_subject);
         scanf("%d", &marks);
+        printf("Enter the full marks of yours no %d subject %s:\n", i, name_of_subject);
+        scanf("%d", &full_marks);
         total_marks += marks;
+        full_marks += full_marks;
     }
     if (no_of_subjects == 1)
     {
@@ -26,31 +30,31 @@ int main()
     }
     else if (no_of_subjects == 2)
     {
-        percentage = total_marks/ 2;
+        percentage = total_marks * 100/ full_marks;
     }
     else if (no_of_subjects == 3)
     {
-        percentage = total_marks / 3;
+        percentage = total_marks *100/ full_marks;
     }
     else if (no_of_subjects == 4)
     {
-        percentage = total_marks / 4;
+        percentage = total_marks*100 / full_marks;
     }
     else if (no_of_subjects == 5)
     {
-        percentage = total_marks / 5;
+        percentage = total_marks*100 / full_marks;
     }
     else if (no_of_subjects == 6)
     {
-        percentage = total_marks / 6;
+        percentage = total_marks *100/ full_marks;
     }
     else if (no_of_subjects == 7)
     {
-        percentage = total_marks / 7;
+        percentage = total_marks*100 / full_marks;
     }
     else if (no_of_subjects == 8)
     {
-        percentage = total_marks / 8;
+        percentage = total_marks *100/ full_marks;
     }
     else
     {
