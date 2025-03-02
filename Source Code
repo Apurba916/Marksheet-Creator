@@ -1,0 +1,116 @@
+#include <stdio.h>
+int main()
+{   
+    char name_of_student[100];
+    printf("Enter the name of the student:\n");
+    fgets(name_of_student, 100, stdin);
+    int no_of_subjects;
+    printf("How many subjects do you have?:\n");/*This program can calculate upto 8 subjects.*/
+    scanf("%d", &no_of_subjects);
+    
+    int total_marks = 0;
+    char name_of_subject[100];
+    int percentage;
+    for (int i = 1; i <= no_of_subjects; i++)
+    {   
+        printf("Enter the name of your no %d subject:\n", i );
+        scanf("%s", name_of_subject);
+        int marks;
+        printf("Enter the marks of yours no %d subject %s:\n", i, name_of_subject);
+        scanf("%d", &marks);
+        total_marks += marks;
+    }
+    if (no_of_subjects == 1)
+    {
+        percentage = total_marks;
+    }
+    else if (no_of_subjects == 2)
+    {
+        percentage = total_marks/ 2;
+    }
+    else if (no_of_subjects == 3)
+    {
+        percentage = total_marks / 3;
+    }
+    else if (no_of_subjects == 4)
+    {
+        percentage = total_marks / 4;
+    }
+    else if (no_of_subjects == 5)
+    {
+        percentage = total_marks / 5;
+    }
+    else if (no_of_subjects == 6)
+    {
+        percentage = total_marks / 6;
+    }
+    else if (no_of_subjects == 7)
+    {
+        percentage = total_marks / 7;
+    }
+    else if (no_of_subjects == 8)
+    {
+        percentage = total_marks / 8;
+    }
+    else
+    {
+        printf("Sorry! This program cannot handle more than 8 subjects.\n");
+    }
+    char grade;
+    if (percentage >= 90)
+    {
+        grade = 'O';
+    }
+    else if (percentage >= 80 && percentage <= 89)
+    {
+        grade = 'A';
+    }
+    else if (percentage >= 70 && percentage <= 79)
+    {
+        grade = 'B';
+    }
+    else if (percentage >= 60 && percentage <= 69)
+    {
+        grade = 'C';
+    }
+    else if (percentage >= 50 && percentage <= 59)
+    {
+        grade = 'D';
+    }
+    else if (percentage >= 40 && percentage <= 49)
+    {
+        grade = 'P';
+    }
+    else if (percentage >= 30 && percentage <= 39)
+    {
+        grade = 'F';
+    }
+    else if (percentage >= 20 && percentage <= 29)
+    {
+        grade = 'F';
+    }
+    else if (percentage >= 10 && percentage <= 19)
+    {
+        grade = 'F';
+    }
+    else if (percentage >= 0 && percentage <= 9)
+    {
+        grade = 'F';
+    }
+    else
+    {
+        printf("The percentage is not valid.\n");
+    }
+
+    
+    
+
+
+    printf("Marksheet of the student:\n");
+    printf("Name of the student:\n");
+    puts(name_of_student);
+    printf("Total marks obtained by the student is %d\n", total_marks);
+    printf("Percentage of the student is %d\n", percentage);
+    printf("The grade of the student is %c\n", grade);
+    return 0;
+}
